@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace portfelik
+{
+    class Expenditure
+    {
+        int Id;
+        decimal Amount;
+        DateTime Date;
+        enum Category
+        {
+            Zakupy,
+            Rozrywka,
+            Rachunki
+        }
+
+    }
+}
