@@ -53,9 +53,9 @@
     <form>
         <input type="text" name="text" id="kwota"
         required>
-        <button type="submit" class="btn-list" onclick="addOnClick()">
+        <button type="button" class="btn-list" onclick="addOnClick()">
             <i class="fa-solid fa-plus"></i>
-        </button>
+          </button>
     </form>
 </div>
 
@@ -66,28 +66,10 @@
         <th>Data</th>
         <th>Kategoria</th>
         <th>Kwota</th>
+        <th></th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <!-- <td>1</td>
-        <td>Domenic</td>
-        <td>88,110</td>
-        <td>dcode</td> -->
-      </tr>
-      <!-- <tr class="active-row">
-        <td>2</td>
-        <td>Sally</td>
-        <td>72,400</td>
-        <td>Students</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Nick</td>
-        <td>52,300</td>
-        <td>dcode</td>
-      </tr> -->
-    </tbody>
+    <tbody></tbody>
   </table>
 <div class="container">
     <ul> </ul>
@@ -181,18 +163,46 @@
                 },200);
             }
             displayTableData();
-            function addOnClick(){
-                var nazwa = document.getElementById('nazwa').value;
-                var kategoria = document.getElementById('kategoria').value;
-                var data = document.getElementById('data').value;
-                var kwota = document.getElementById('kwota').value;
-        
-                if(nazwa && kategoria && data && kwota){
-                    let id = expenditureData.length + 1;
-                    expenditureData.push({nazwa:nazwa, kategoria:kategoria, data:data, kwota:kwota})
-                    displayTableData();
-                }
-           }
+            function addOnClick() {
+  let nazwa = document.getElementById("nazwa").value;
+  let data = document.getElementById("data").value;
+  let kategoria = document.getElementById("kategoria").value;
+  let kwota = document.getElementById("kwota").value;
+
+  let table = document.querySelector("table tbody");
+
+  // Tworzenie nowego wiersza tabeli
+  let row = table.insertRow();
+
+  // Dodawanie komórek do wiersza tabeli
+  let cellNazwa = row.insertCell();
+  let cellData = row.insertCell();
+  let cellKategoria = row.insertCell();
+  let cellKwota = row.insertCell();
+  let cellAkcje = row.insertCell();
+
+  // Ustawianie wartości komórek
+  cellNazwa.innerHTML = nazwa;
+  cellData.innerHTML = data;
+  cellKategoria.innerHTML = kategoria;
+  cellKwota.innerHTML = kwota;
+
+  // Dodawanie przycisku "Usuń"
+  let btnUsun = document.createElement("button");
+  btnUsun.textContent = "Usuń";
+  btnUsun.addEventListener("click", function () {
+    row.remove();
+  });
+  cellAkcje.appendChild(btnUsun);
+
+
+// wyczyszczenie pól formularza
+document.getElementById("nazwa").value = "";
+document.getElementById("data").value = "";
+document.getElementById("kategoria").value = "";
+document.getElementById("kwota").value = "";
+}
+
 
 </script>
         
