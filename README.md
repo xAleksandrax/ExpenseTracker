@@ -1,4 +1,4 @@
-Aplikacja klient-serwer polegająca na dodawaniu wydatków na stronie jest napisana w technologiach C#, JavaScript, HTML, CSS, SQL i Entity framework.
+Aplikacja klient-serwer polegająca na dodawaniu wydatków na stronie jest napisana w technologiach C#, JavaScript, HTML, CSS, SQL i Entity framework, współtworzona przez Aleksandrę Modrzejewską oraz Dominikę Nowak.
 
 Aplikacja ta składa się z dwóch części: klienta i serwera. Klient jest napisany w HTML, CSS i JavaScript i działa w przeglądarce internetowej. Serwer natomiast jest napisany w języku C# i wykorzystuje technologię Entity framework do dostępu do bazy danych SQL.
 
