@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfelik</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Montserrat:wght@500&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a6dd123f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="bg">
+        <img src="./images/kolo.png" alt="" class="bg_img_kolo">
+        <img src="./images/kolo.png" alt="" class="bg_img_kolo2">
+        
+    </div>
+<div id="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="dolaczDoNas.html">DOŁĄCZ DO NAS 
+                        <span class="link_border"></span>
+                    </a></li>
+                    <li><a href="glowna.html">MÓJ PORTFELIK
+                        <span class="link_border"></span>
+                    </a></li>
+                    <li><a href="#about_us">O NAS
+                        <span class="link_border"></span>
+                    </a></li>
+                </ul>
+            </div>
+            <img src="./images/menu_button.png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+        <header>
+            <h1>Portfelik</h1>
+         </header>
+         <div class="images">
+            <img src="./images/kobitki.png" alt="" class="img_foto"> 
+         </div>
+         <div class="container">
+        <!---<div>
+            <img src="./images/karteczka.png" class="text_img">
+        </div>--->
+        <div class="text">
+            <h2>Witamy Cię<br>
+                w lepszym świecie<br>
+                oszczędzania!
+            </h2>
+        </div>
+    </div>  
+    </div>
+    
+</div> 
+<!-----------about us---------->
+<div id="about_us">
+    <div class="container">
+        <h1 class="sub-title">O Nas</h1>
+        <div class="about-col-1">
+            <img src="./images/Ola_avatar.png" alt="" class="Ola_avatar">
+            <p>Aleksandra <br>
+            Poznaj mnie lepiej :   <a href="portfolio.html"><i class="fa-solid fa-link"></i></a></p>
+            <a href="https://www.linkedin.com/in/aleksandra-modrzejewska-549254262/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/xAleksandrax"><i class="fa-brands fa-github"></i></a>
+        
+        </div>
+        <div class="about-col-2">
+            <img src="./images/Dominika_avatar2.png" alt="" class="Domi_avatar"> 
+            <p>Dominika <br>
+            Poznaj mnie lepiej :  <a href="portfolio.html"><i class="fa-solid fa-link"></i></a></p>
+           
+            <a href="https://www.linkedin.com/in/dominika-nowak-b5b319262"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/dxminikxx"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/_dxminikxx/"><i class="fa-brands fa-instagram"></i></a>
+        </div>   
+    </div>
+</div>
+<div class="copyright">
+    <P> Website made with <i class="fa-solid fa-heart"></i> by Aleksandra Modrzejewska and Dominika Nowak.<br>
+        Graphics used on the website made by Dominika Nowak.</P>
+</div>
+<div class="arrow-up">
+    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+</body>
+<script>
+    const menuHamburger=document.querySelector(".menu-hamburger")
+    const navLinks=document.querySelector(".nav-links")
+    menuHamburger.addEventListener('click',()=>{navLinks.classList.toggle('mobile-menu')})
+</script>
+</html>
