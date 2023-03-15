@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(wallet.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./images_github/wallet.jpg);
     background-color: #cccccc;
     background-size: cover;
     background-position: center;

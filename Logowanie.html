@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Log in</title>
-        <link rel="stylesheet" href="logowanie.css">
+        <link rel="stylesheet" href="Logowanie.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
         <script src="https://kit.fontawesome.com/7a6dd123f7.js" crossorigin="anonymous"></script>
     </head>
@@ -13,7 +13,7 @@
                 <label for="chk" aria-hidden="true">Mam konto</label>
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" id="password" placeholder="Hasło" required="">
-                <img src="eye.png" id="eyeicon">
+                <img src="./images_github/eye.png" id="eyeicon">
                 
                 <button class="btn1">Zaloguj się</button>
             </form>
@@ -24,7 +24,7 @@
                 <input type="text" name="txt" placeholder="Nazwa użytkownika" required="">
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" id="haslo" placeholder="Hasło" required="">
-                <img src="eye.png" id="eyeicon2">
+                <img src="./images_github/eye.png" id="eyeicon2">
                 <button class="btn2">Dołączam!</button>
             </form>
         </div>
@@ -35,10 +35,10 @@
         eyeicon.onclick = function(){
             if(password.type == "password"){
                 password.type = "text";
-                eyeicon.src = "openeye.png";
+                eyeicon.src = "./images_github/openeye.png";
             }else{
                 password.type = "password";
-                eyeicon.src = "eye.png";
+                eyeicon.src = "./images_github/eye.png";
             }
         }
     </script>
@@ -48,10 +48,10 @@
         eyeicon2.onclick = function(){
             if(haslo.type == "password"){
                 haslo.type = "text";
-                eyeicon2.src = "openeye.png";
+                eyeicon2.src = "./images_github/openeye.png";
             }else{
                 haslo.type = "password";
-                eyeicon2.src = "eye.png";
+                eyeicon2.src = "./images_github/eye.png";
             }
         }
     </script>

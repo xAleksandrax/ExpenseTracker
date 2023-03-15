@@ -220,7 +220,7 @@ a:hover .link_border
     .navbar
     {
         padding: 0;
-        position: relative;
+        position: fixed;
        
     }
     .navbar .menu-hamburger
@@ -233,7 +233,7 @@ a:hover .link_border
         background-color:#00968746;
         backdrop-filter: blur(8px);
         top: 0;
-        left: 500px;
+        left: 830px;
         width: 30vw;
         height: 100vh;
         display: flex;
