@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    background: #fef7e8;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_tree
+{
+    width: 350px;
+    height: auto;
+    position: absolute;
+    bottom: 60px;
+    right: 75%;
+}
+
+h2
+{
+    font-family: 'Homemade Apple', cursive;
+    font-weight: 600;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+}
+
+h3
+{
+    font-family: 'Homemade Apple', cursive;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 10px;
+    /* padding-bottom: -50px; */
+}
+
+form
+{
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: -3px 6px 4px #222;
+}
+
+form input
+{
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+}
+
+form button
+{
+    width: 50px;
+    height: 40px;
+    border: none;
+    background: #009688;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.container
+{
+    margin-top: 50px;
+}
+
+ul
+{
+    list-style: none;
+    width: 500px;
+}
+
+ul li
+{
+    position: relative;
+    width: 100%;
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+    box-shadow: -3px 6px 4px #222;
+    transition: 0.5s linear;
+}
+
+ul li span
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    text-align: center;
+    background: rgb(209, 42, 42);
+}
+
+h1
+{
+    font-weight: 800;
+    font-size: 48px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.bg_img_kolo
+{
+    width: 20cm;
+    height: 20cm;
+    position: absolute;
+    right: 70%;
+    bottom: -400px;
+   
+}
+
+.bg_img_kolo2
+{
+    width: 30cm;
+    height: 30cm;
+    position: absolute;
+    left: 75%;
+    top: -150px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+}
+
+.table thead tr {
+    background-color: #009688;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009688;
+}
+
+.table tbody tr.active-row {
+    font-weight: bold;
+    color: #009688;
+}
