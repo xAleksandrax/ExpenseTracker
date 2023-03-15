@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(wallet.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background-color: #009688;
+    opacity: 75%;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.signup img{
+    width: 22px;
+    cursor: pointer;
+    position: absolute;
+    left: 250px;
+    bottom: 335.5px;
+    opacity: 50%;
+}
+.login img{
+    width: 22px;
+    cursor: pointer;
+    position: absolute;
+    left: 250px;
+    bottom: 255.5px;
+    opacity: 50%;
+}
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff; /*napis dołączam*/
+    background: #009688;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+.btn1:hover{
+    background: #fff;
+    color: #009688;
+}
+.btn2:hover{
+    background: #fff;
+    color: #009688;
+    border: 2px solid #009688;
+}
+.login{
+    height: 460px;
+    background: #fff; /*tło w loginie*/
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+    font-family: sans-serif;
+}
+.login label{
+    color: #009688;
+    transform: scale(.6);
+}
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform: scale(0.8);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.5);
+}
