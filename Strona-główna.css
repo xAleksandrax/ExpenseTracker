@@ -1,0 +1,325 @@
+:root
+{
+    --turquise: #009688;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #fef7e8;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    /* position: relative; */
+    /*padding: 32 px 92px;*/
+    overflow: hidden;
+    
+}
+
+.about-col-1 
+{
+    /* text-align: center; */
+    position: relative;
+    margin-left: 250px;
+    float: left;
+}
+
+.about-col-1 p
+{
+    font-size: 24px;
+    text-align: center;
+    top: -10px;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.about-col-1 a
+{
+    font-size: 20px;
+    margin-left: 7px;
+    color: var(--turquise);
+   /*center icons*/
+}
+
+.about-col-2
+{
+    position: relative;
+    margin-left: 150px;
+    float: left;
+}
+
+.about-col-2 p
+{
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.about-col-2 a
+{
+    font-size: 20px;
+    margin-left: 7px;
+    color: var(--turquise);
+}
+
+.Ola_avatar
+{
+    width: 400px;
+    height: auto;
+}
+
+.Domi_avatar
+{
+    width: 400px;
+    height: auto;
+}
+
+/*.text_img
+{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    bottom: 0;
+    left: ;
+}*/
+
+.img_foto
+{
+
+    width: 13cm;
+    height: 13cm;
+    position: absolute;
+    bottom: 60px;
+    right: 65%;
+    animation: skok 7s infinite ;
+}
+
+.bg_img_kolo
+{
+    width: 20cm;
+    height: 20cm;
+    position: absolute;
+    right: 70%;
+    bottom: -400px;
+   
+}
+
+.bg_img_kolo2
+{
+    width: 30cm;
+    height: 30cm;
+    position: absolute;
+    left: 75%;
+    top: -150px;
+}
+
+h1
+{
+    font-weight: 800;
+    font-size: 48px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+}
+
+h2
+{
+    font-family: 'Homemade Apple', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+.navbar
+{
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    left: 1070px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbar a
+{
+    color: black;
+    position: relative;
+    text-decoration:none;
+}
+
+.navbar .nav-links ul
+{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .nav-links ul li
+{
+    margin: 0 25px;
+
+}
+
+.navbar .nav-links ul a
+{
+    color: black;
+    font-weight: 800;
+    
+}
+
+.link_border
+{
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    top:100%;
+    left:0;
+    background: linear-gradient(90deg, transparent, #ffff);
+    transition: width 0.3s;
+}
+
+a:hover .link_border
+{
+    width:100%;
+}
+
+.navbar .menu-hamburger
+{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: -360px;
+    width: 35px;
+}
+
+
+@media screen 
+{
+    .navbar
+    {
+        padding: 0;
+        position: relative;
+       
+    }
+    .navbar .menu-hamburger
+    {
+        display: block;
+    }
+    .nav-links
+    {
+        position: absolute;
+        background-color:#00968746;
+        backdrop-filter: blur(8px);
+        top: 0;
+        left: 500px;
+        width: 30vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 1s ease;
+        
+    }
+    .nav-links ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li
+    {
+        margin: 25px 0;
+        font-size: 22px;
+        
+    }
+}
+
+.mobile-menu
+{
+    margin-left: 0;
+    left:0;
+}
+
+.nav-links.mobile-menu
+{
+    margin-left: 0;
+    
+}
+
+.menu-hamburger
+{
+    width: 1cm;
+    height: 1cm;
+}
+
+@keyframes skok
+{
+    0%, 100%
+    {
+        transform: translate(0px,30px);
+    }
+    50%
+    {
+        transform: translate(0px, -50px);
+    }
+}
+
+.arrow-up
+{
+   position: fixed;
+   width: 30px;
+   height: 30px;
+   bottom: 40px;
+   right: 50px;
+   font-size: 25px;
+}
+
+.arrow-up a
+{
+    color: black;
+}
+
+.arrow-up a:hover
+{
+    color: var(--turquise);
+}
+
+.copyright
+{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #1ba19458;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.copyright i
+{
+    color:var(--turquise);
+}
+
+
