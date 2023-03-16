@@ -73,6 +73,7 @@ body
     font-family: 'Homemade Apple', cursive;
 }
 
+
 .about-col-2 a
 {
     font-size: 20px;
@@ -207,10 +208,10 @@ a:hover .link_border
 
 .navbar .menu-hamburger
 {
-    display: none;
-    position: absolute;
+    display: flex;
+    position: fixed;
     top: 30px;
-    right: -360px;
+    right: 100px;
     width: 35px;
 }
 
@@ -239,7 +240,6 @@ a:hover .link_border
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: -100%;
         transition: all 1s ease;
         
     }
@@ -255,6 +255,7 @@ a:hover .link_border
         font-size: 22px;
         
     }
+    
 }
 
 .mobile-menu

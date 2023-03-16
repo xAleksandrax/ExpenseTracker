@@ -57,6 +57,7 @@ function addElementToTable(nowaKategoria, nowaDate, nowaKwota, nowaNazwa){
     // Dodawanie przycisku "Usuń"
      const btnUsun = document.createElement("button");
      btnUsun.textContent = "Usuń";
+     btnUsun.classList.add("usun-btn");
      btnUsun.addEventListener("click", function () {
          row.remove();
      });
