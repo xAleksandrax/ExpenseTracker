@@ -13,6 +13,7 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .img_tree
@@ -107,6 +108,22 @@ ul li span
     background: rgb(209, 42, 42);
 }
 
+select
+{
+    position: relative;
+    width: 100%;
+    background: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+    box-shadow: -3px 6px 4px #222;
+    transition: 0.5s linear;
+    outline: none;
+}
+
 h1
 {
     font-weight: 800;
@@ -180,5 +197,24 @@ h1
 
 .table tbody tr.active-row {
     font-weight: bold;
+    color: #009688;
+}
+.arrow-back
+{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    margin-top: 30px;
+    left: 40px;
+}
+
+.arrow-back a
+{
+    color: black;
+}
+
+.arrow-back a:hover
+{
     color: #009688;
 }
