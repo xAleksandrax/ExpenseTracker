@@ -45,13 +45,13 @@
         </button> -->
     </form>
     <h3>Kategoria</h3>
-    <form>
-        <input type="text" name="text" id="kategoria" 
-        required>
-        <!-- <button type="submit" class="btn-list">
-            <i class="fa-solid fa-plus"></i>
-        </button> -->
-    </form>
+    <select id="kategoria">
+        <option value="">Wybierz kategorię</option>
+        <option value="jedzenie">Jedzenie</option>
+        <option value="rozrywka">Rozrywka</option>
+        <option value="transport">Transport</option>
+        <!-- Dodaj więcej opcji kategorii tutaj -->
+    </select>
     <h3>Kwota</h3>
     <form>
         <input type="text" name="text" id="kwota"
@@ -79,6 +79,9 @@
 </div>
         <div>
             <img src="./images_github/drzewko.png" alt="" class="img_tree">
+        </div>
+        <div class="arrow-back">
+            <a href="strona-wyboru.html"><i class="fa-solid fa-arrow-left"></i></a>
         </div>
 </body>
 </html>
