@@ -1,4 +1,3 @@
-
 const expenditureData = [];
 
 function initializePage() {
@@ -94,12 +93,11 @@ async function addOnClick() {
     document.getElementById("kategoria").value = "";
     document.getElementById("kwota").value = "";
 
-    await sendExpenditure(kategoria, data, kwota, nazwa);
+    await sendExpenditure(parseInt(kategoria), data, kwota, nazwa);
 }
 
 async function sendExpenditure(kategoria, date, kwota, nazwa) {
-    const HttpService = require("./HttpService.js");
-    await HttpService.post("https://localhost:7183", {name:nazwa, amount:kwota, date:date, category:kategoria})
+    await HttpService.post("https://localhost:7183/Expenditure", {name:nazwa, amount:kwota, date:date, category:kategoria})
 }
 setTimeout(() => {
     initializePage();

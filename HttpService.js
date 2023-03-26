@@ -1,4 +1,3 @@
-import axios from 'axios'
 class HttpService
 {
     //klasa powinna miec 2 metody get i post 
@@ -9,17 +8,17 @@ class HttpService
         return await response.text();
     }
 
-    static async post(url, body)
+    static post(url, body)
     {
-        await axios.post(url, body)
-        .then(response => {
-        console.log(response.data);
-        })
-        .catch(error => {
-        console.log(error);
-        }); 
+        const request = new XMLHttpRequest();
+        request.open("POST", url, true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.onload=(response)=>{
+            console.log(response);
+        }
+        request.send(JSON.stringify(body))
+
     }
 }
 
-export default HttpService;
 //post wysyła dane na serwer
