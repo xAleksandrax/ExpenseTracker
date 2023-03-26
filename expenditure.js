@@ -1,5 +1,12 @@
 const expenditureData = [];
 
+const categoryValues = {
+    "": -1,
+    "Jedzenie": 0,
+    "Rozrywka": 1,
+    "Rachunki": 2
+};
+
 function initializePage() {
     console.log(document);
     const inputText = document.getElementById('kwota');
@@ -64,27 +71,29 @@ function addElementToTable(nowaKategoria, nowaDate, nowaKwota, nowaNazwa){
 }
 
 
-function createTable(){
-    var html = "<table border='1|1' class='table'>"
-    html += "<thead>";
-    html += "<tr>";
-    html += "<td>";
-    html += "<td>" + 'Nazwa' + "</td>";
-    html += "<td>" + 'Data' + "</td>";
-    html += "<td>" + 'Kategoria' + "</td>";
-    html += "<td>" + 'Kwota' + "</td>";
-    html += "<tr>";
-    html += "<thead>";
+// function createTable(){
+//     var html = "<table border='1|1' class='table'>"
+//     html += "<thead>";
+//     html += "<tr>";
+//     html += "<td>";
+//     html += "<td>" + 'Nazwa' + "</td>";
+//     html += "<td>" + 'Data' + "</td>";
+//     html += "<td>" + 'Kategoria' + "</td>";
+//     html += "<td>" + 'Kwota' + "</td>";
+//     html += "<tr>";
+//     html += "<thead>";
 
-    html += "</table>";
-    document.getElementById("table").innerHTML = html
-}
+//     html += "</table>";
+//     document.getElementById("table").innerHTML = html
+// }
 
 async function addOnClick() {
     const nazwa = document.getElementById("nazwa").value;
     const data = document.getElementById("data").value;
     const kategoria = document.getElementById("kategoria").value;
     const kwota = document.getElementById("kwota").value;
+
+    const kategoriaValue = categoryValues[kategoria];
     addElementToTable(kategoria, data, kwota, nazwa);
 
     // wyczyszczenie pól formularza
@@ -93,8 +102,42 @@ async function addOnClick() {
     document.getElementById("kategoria").value = "";
     document.getElementById("kwota").value = "";
 
-    await sendExpenditure(parseInt(kategoria), data, kwota, nazwa);
+    await sendExpenditure(kategoriaValue, data, kwota, nazwa);
 }
+
+async function displayData() {
+    const data = await HttpService.get("https://localhost:7183/Expenditure");
+    const dataList = document.getElementById("data-list");
+    data.forEach(item => {
+        const categoryString = getCategoryString(item.category); // pobranie stringa odpowiadającego wartości enuma Category
+        const row = dataList.insertRow();
+        const nameCell = row.insertCell(0);
+        const amountCell = row.insertCell(1);
+        const dateCell = row.insertCell(2);
+        const categoryCell = row.insertCell(3);
+        nameCell.textContent = item.name;
+        amountCell.textContent = item.amount;
+        dateCell.textContent = new Date(item.date).toLocaleDateString();
+        categoryCell.textContent = categoryString;
+    });
+}
+
+
+    
+    function getCategoryString(category) {
+    switch(category) {
+    case 0:
+    return "Zakupy";
+    case 1:
+    return "Rozrywka";
+    case 2:
+    return "Rachunki";
+    default:
+    return "";
+    }
+    }
+    
+    displayData();
 
 async function sendExpenditure(kategoria, date, kwota, nazwa) {
     await HttpService.post("https://localhost:7183/Expenditure", {name:nazwa, amount:kwota, date:date, category:kategoria})

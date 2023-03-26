@@ -22,7 +22,7 @@ namespace PortfelikApi.Controllers
         public IEnumerable<Expenditure> Get()
         {
             List<Expenditure> expenditures = new List<Expenditure>();
-            string connectionString = "Data Source=DESKTOP-P0KTUDH\SQLEXPRESS;Initial Catalog=Portfelik;Integrated Security=True;TrustServerCertificate=True;";
+            string connectionString = "Data Source=LAPTOP-TN605T47\\SQLEXPRESS;Initial Catalog=Portfelik;Integrated Security=True;TrustServerCertificate=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM Expenditures";
