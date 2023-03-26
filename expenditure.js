@@ -80,8 +80,6 @@ function createTable(){
     document.getElementById("table").innerHTML = html
 }
 
-
-
 async function addOnClick() {
     const nazwa = document.getElementById("nazwa").value;
     const data = document.getElementById("data").value;
@@ -101,8 +99,9 @@ async function addOnClick() {
 async function sendExpenditure(kategoria, date, kwota, nazwa) {
     await HttpService.post("https://localhost:7183/Expenditure", {name:nazwa, amount:kwota, date:date, category:kategoria})
 }
+
+
 setTimeout(() => {
     initializePage();
 }, 500
 );
-

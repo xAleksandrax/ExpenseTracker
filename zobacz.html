@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Przykładowa strona</title>
+  </head>
+  <body>
+    <h1>Dane z serwera</h1>
+    <ul id="data-list"></ul>
+    <script src="./HttpService.js"></script>
+    <script>
+      async function displayData() {
+  const data = await HttpService.get("https://localhost:7183/Expenditure");
+  const dataList = document.getElementById("data-list");
+  data.forEach(item => {
+    const li = document.createElement("li");
+    const categoryString = getCategoryString(item.category); // pobranie stringa odpowiadającego wartości enuma Category
+    li.textContent = `Nazwa: ${item.name}, Kwota: ${item.amount}, Data: ${item.date}, Kategoria: ${categoryString}`;
+    dataList.appendChild(li);
+  });
+}
+
+function getCategoryString(category) {
+  switch(category) {
+    case 0:
+      return "Zakupy";
+    case 1:
+      return "Rozrywka";
+    case 2:
+      return "Rachunki";
+    default:
+      return "";
+  }
+}
+      displayData();
+    </script>
+  </body>
+</html>
