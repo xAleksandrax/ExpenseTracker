@@ -60,10 +60,10 @@ function addElementToTable(nowaKategoria, nowaDate, nowaKwota, nowaNazwa){
      btnUsun.addEventListener("click", function () {
          row.remove();
      });
-     buttonCell.appendChild(btnUsun);
-    
-     
+     buttonCell.appendChild(btnUsun);    
 }
+
+
 function createTable(){
     var html = "<table border='1|1' class='table'>"
     html += "<thead>";
@@ -79,6 +79,8 @@ function createTable(){
     html += "</table>";
     document.getElementById("table").innerHTML = html
 }
+
+
 
 async function addOnClick() {
     const nazwa = document.getElementById("nazwa").value;

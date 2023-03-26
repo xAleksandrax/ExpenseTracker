@@ -17,8 +17,6 @@ class HttpService
             console.log(response);
         }
         request.send(JSON.stringify(body))
-
     }
 }
 
-//post wysyła dane na serwer
