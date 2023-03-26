@@ -60,10 +60,10 @@ function addElementToTable(nowaKategoria, nowaDate, nowaKwota, nowaNazwa){
      btnUsun.addEventListener("click", function () {
          row.remove();
      });
-     buttonCell.appendChild(btnUsun);
-    
-     
+     buttonCell.appendChild(btnUsun);    
 }
+
+
 function createTable(){
     var html = "<table border='1|1' class='table'>"
     html += "<thead>";
@@ -99,8 +99,9 @@ async function addOnClick() {
 async function sendExpenditure(kategoria, date, kwota, nazwa) {
     await HttpService.post("https://localhost:7183/Expenditure", {name:nazwa, amount:kwota, date:date, category:kategoria})
 }
+
+
 setTimeout(() => {
     initializePage();
 }, 500
 );
-
