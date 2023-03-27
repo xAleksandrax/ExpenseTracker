@@ -23,6 +23,7 @@ body
     position: absolute;
     bottom: 60px;
     right: 75%;
+    z-index: -1;
 }
 
 h2
@@ -140,6 +141,7 @@ h1
     position: absolute;
     right: 70%;
     bottom: -400px;
+    z-index: -1;
    
 }
 
@@ -150,6 +152,7 @@ h1
     position: absolute;
     left: 75%;
     top: -150px;
+    z-index: -1;
 }
 
 .table {

@@ -7,6 +7,8 @@ const categoryValues = {
     "Rachunki": 2
 };
 
+let totalAmount = 0;
+
 function initializePage() {
     console.log(document);
     const inputText = document.getElementById('kwota');
@@ -108,6 +110,10 @@ async function addOnClick() {
 async function displayData() {
     const data = await HttpService.get("https://localhost:7183/Expenditure");
     const dataList = document.getElementById("data-list");
+    if (dataList === null) {
+        console.error("data-list element not found");
+        return;
+      }      
     data.forEach(item => {
         const categoryString = getCategoryString(item.category); // pobranie stringa odpowiadającego wartości enuma Category
         const row = dataList.insertRow();
@@ -116,14 +122,15 @@ async function displayData() {
         const dateCell = row.insertCell(2);
         const categoryCell = row.insertCell(3);
         nameCell.textContent = item.name;
-        amountCell.textContent = item.amount;
-        dateCell.textContent = new Date(item.date).toLocaleDateString();
+        amountCell.textContent = item.amount + " zł";
+        dateCell.textContent = new Date(item.date).toLocaleDateString() + "r";
         categoryCell.textContent = categoryString;
+        totalAmount += item.amount;
     });
+    console.log("Total amount: " + totalAmount + " zł");
 }
 
 
-    
     function getCategoryString(category) {
     switch(category) {
     case 0:

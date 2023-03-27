@@ -1,19 +1,5 @@
 class HttpService
 {
-    // static async get(url) {
-    //     const response = await fetch(url);
-    //     const data = await response.text();
-    //     console.log(data); // wyświetlenie odpowiedzi serwera w konsoli
-    //     return data;
-    //   }
-    // static get(url) {
-    //     return fetch(url)
-    //       .then(response => response.text())
-    //       .then(data => {
-    //         console.log(data); // Wyświetlenie odpowiedzi serwera w konsoli
-    //         return data;
-    //       });
-    //   }
     static async get(url) {
         try {
           const response = await fetch(url);

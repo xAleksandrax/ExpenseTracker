@@ -128,10 +128,11 @@ table {
   }
   
   h2
-{
-    font-weight: 200;
-    font-size: 28px;
-    text-decoration: none;
-    text-align: center;
-    padding: 20px;
-}
+  {
+      font-family: 'Homemade Apple', cursive;
+      font-weight: 600;
+      font-size: 24px;
+      text-decoration: none;
+      text-align: center;
+      padding: 20px;
+  }
