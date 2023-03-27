@@ -8,6 +8,9 @@ const categoryValues = {
 };
 
 let totalAmount = 0;
+let shoppingAmount = 0;
+let funAmount = 0;
+let billsAmount = 0;
 
 function initializePage() {
     console.log(document);
@@ -125,11 +128,28 @@ async function displayData() {
         amountCell.textContent = item.amount + " zł";
         dateCell.textContent = new Date(item.date).toLocaleDateString() + "r";
         categoryCell.textContent = categoryString;
-        totalAmount += item.amount;
     });
-    console.log("Total amount: " + totalAmount + " zł");
 }
 
+    async function getAmount(){
+        const data = await HttpService.get("https://localhost:7183/Expenditure");    
+        data.forEach(item => {
+            totalAmount += item.amount;
+            if(getCategoryString(item.category) == "Zakupy"){
+                shoppingAmount += item.amount;
+            }
+            else if(getCategoryString(item.category) == "Rozrywka"){
+                funAmount += item.amount;
+            }
+            else if(getCategoryString(item.category) == "Rachunki"){
+                billsAmount += item.amount;
+            }
+        });
+        document.getElementById("total-amount").innerHTML += totalAmount + " zł";
+        document.getElementById("shopping-amount").innerHTML += shoppingAmount + " zł";
+        document.getElementById("fun-amount").innerHTML += funAmount + " zł";
+        document.getElementById("bills-amount").innerHTML += billsAmount + " zł";
+    }
 
     function getCategoryString(category) {
     switch(category) {
@@ -145,6 +165,7 @@ async function displayData() {
     }
     
     displayData();
+    getAmount();
 
 async function sendExpenditure(kategoria, date, kwota, nazwa) {
     await HttpService.post("https://localhost:7183/Expenditure", {name:nazwa, amount:kwota, date:date, category:kategoria})

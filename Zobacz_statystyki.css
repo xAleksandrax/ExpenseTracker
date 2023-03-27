@@ -37,7 +37,7 @@ h1
     position: absolute;
     right: 70%;
     bottom: -400px;
-   
+    z-index: -1;
 }
 
 .bg_img_kolo2
@@ -47,6 +47,7 @@ h1
     position: absolute;
     left: 75%;
     top: -150px;
+    z-index: -1;
 }
 .img_tree
 {
@@ -55,6 +56,7 @@ h1
     position: absolute;
     bottom: 60px;
     right: 75%;
+    z-index: -1;
 }
 .arrow-back
 {
