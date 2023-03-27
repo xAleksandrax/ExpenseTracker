@@ -22,14 +22,22 @@
     </div>
     <div id="header">
         <h1>Portfelik</h1>
-        <h2 id="total-amount">Laczna suma wydatków: </h2>
-        <h2>z czego</h2>
-        <h2 id="shopping-amount">Wydatki przeznaczone na zakupy: </h2>
-        <h2 id="fun-amount">Wydatki przeznaczone na rozrywkę: </h2>
-        <h2 id="bills-amount">Wydatki przeznaczone na rachunki: </h2>
+        <h2 id="total-amount">Laczna suma twoich wydatków</h2>
+        <h3 id="shopping-amount">Wydatki przeznaczone na zakupy: <br> <i class="fa-solid fa-basket-shopping"></i></h3>
+        <h3 id="fun-amount">Wydatki przeznaczone na rozrywkę: <br> <i class="fa-solid fa-balloons"></i></h3>
+        <h3 id="bills-amount">Wydatki przeznaczone na rachunki: <br><i class="fa-sharp fa-solid fa-file-invoice"></i></h3>
     </div>
     <div>
         <img src="./images_github/drzewko.png" alt="" class="img_tree">
     </div>
+    <script>
+        var typingEffect = new Typed("#total_amount", {
+            strings : [total-amount],
+            loop : true,
+            typeSpeed : 100, 
+            backSpeed : 80,
+            backDelay : 1500
+        })
+    </script>
 </body>
 </html>

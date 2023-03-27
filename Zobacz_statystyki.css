@@ -9,7 +9,7 @@ body
     width: 100vw;
     height: 100vh;
     background: #fef7e8;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -86,4 +86,18 @@ h2
     text-decoration: none;
     text-align: center;
     padding: 20px;
+}
+
+h3
+{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px
+}
+
+h3 i
+{
+    color: #009688;
 }
